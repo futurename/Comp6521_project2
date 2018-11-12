@@ -8,7 +8,7 @@ import java.util.LinkedHashSet;
 import java.util.Random;
 
 public class GenerateDataSet {
-    static final int BASKETS_NUM = 1000000;
+    static final int BASKETS_NUM = 10000;
     static final int SUPPORT = 4;
     static final int ITEM_RANGE = 99;
     static final int MIN_ITEMS_IN_BASKETS_NUM = 3;
