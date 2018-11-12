@@ -4,12 +4,16 @@ import java.io.IOException;
 import java.util.*;
 
 public class ItemCombination {
-        static LinkedHashMap<String, Integer> lastRoundHashMap;
+    static ArrayList<String> lastRoundValidatedCombination;
+    static TreeSet<Integer> curFrequentSet;
+    static int mapsetCounter = 0;
+
     static void testItemCombination(ArrayList<Integer> numArray, int numForCombination) throws IOException {
-        LinkedHashMap<String, Integer> validatedItemSetMap = new LinkedHashMap<>();
+        curFrequentSet = new TreeSet<>();
+        LinkedHashMap<Integer, ItemsetStructClass> validatedItemSetMap = new LinkedHashMap<>();
         int arrayLength = numArray.size();
         int[] binaryShiftArray = new int[arrayLength];
-        if (arrayLength == numForCombination) {
+        if (arrayLength <= numForCombination) {
             System.out.println("num for combination is equal the size of num array! finish!");
             return;
         } else {
@@ -21,64 +25,91 @@ public class ItemCombination {
         for (int i = 0; i < numForCombination; i++) {
             firstCombinationArray.add(numArray.get(i));
         }
-        if (testIsCurCombinationPassed(firstCombinationArray)) {
-            int value = getNumOfMatchedSet(firstCombinationArray);
-            if(value >= ProjectMainClass.supportNum) {
-                String itemSetKey = convertArrayToString(firstCombinationArray);
-                validatedItemSetMap.put(itemSetKey, value);
-            }
-        }
+        processItemSet(firstCombinationArray, validatedItemSetMap);
 
         while (isContainOneZero(binaryShiftArray)) {
             transformBinaryArray(binaryShiftArray);
-            //System.out.println(Arrays.toString(binaryShiftArray));
             ArrayList<Integer> curCombinatioArray = new ArrayList<>();
             for (int i = 0; i < binaryShiftArray.length; i++) {
                 if (binaryShiftArray[i] == 1) {
                     curCombinatioArray.add(numArray.get(i));
                 }
             }
-            System.out.println("CurArray: " + curCombinatioArray);
-            if (testIsCurCombinationPassed(curCombinatioArray)) {
-                int value = getNumOfMatchedSet(curCombinatioArray);
-                if(value >= ProjectMainClass.supportNum) {
-                    String itemSetKey = convertArrayToString(curCombinatioArray);
-                    validatedItemSetMap.put(itemSetKey, value);
-                    //System.out.println("add set: " + itemSetKey + ", count: " + value);
-                }
-            }
+            //System.out.println("CurArray: " + curCombinatioArray);
+            processItemSet(curCombinatioArray, validatedItemSetMap);
         }
-        if(testIsCurCombinationPassed(numArray) && numForCombination == arrayLength - 1){
-            int value = getNumOfMatchedSet(numArray);
-            if(value >= ProjectMainClass.supportNum) {
-                String itemSetKey = convertArrayToString(numArray);
-                validatedItemSetMap.put(itemSetKey, value);
+
+        int value = getNumOfMatchedSet(numArray);
+        if (value > 0 && numForCombination == arrayLength - 1) {
+            if (value >= ProjectMainClass.supportNum) {
+                processItemSet(numArray, validatedItemSetMap);
                 //System.out.println("add set: " + itemSetKey + ", count: " + value);
             }
         }
         writeOutputFile(ProjectMainClass.OUPUT_FILENAME, validatedItemSetMap);
     }
 
-    private static void writeOutputFile(String outputFilename, LinkedHashMap<String, Integer> validatedItemSetMap) throws IOException {
-        Set<String> keySet = validatedItemSetMap.keySet();
+    private static void addCombToRefArray(ArrayList<Integer> arrayList) {
+        String result = "";
+        for(int num: arrayList){
+            result += num;
+        }
+        lastRoundValidatedCombination.add(result);
+    }
+
+    private static void addToValidatedMap(ArrayList<Integer> arrayList, int value,LinkedHashMap<Integer,
+            ItemsetStructClass> map) {
+        ItemsetStructClass curItemStruct = new ItemsetStructClass();
+        for(int num : arrayList){
+            curItemStruct.itemArray.add(num);
+            //System.out.println("adding num: " + num);
+        }
+        curItemStruct.count = value;
+        map.put(++mapsetCounter, curItemStruct);
+        System.out.println("adding itemset - counter: " + mapsetCounter + ", itemset: " + curItemStruct.itemArray +
+                ", count: " +curItemStruct.count);
+
+    }
+
+    private static void processItemSet(ArrayList<Integer> arrayList, LinkedHashMap<Integer, ItemsetStructClass> map) {
+            int value = getNumOfMatchedSet(arrayList);
+            if (value >= ProjectMainClass.supportNum) {
+                addToValidatedMap(arrayList, value, map);
+                addToFrequentSet(arrayList);
+                //System.out.println("adding: " + arrayList + ", count: " + value);
+            }
+        }
+
+    private static void addToFrequentSet(ArrayList<Integer> arrayList) {
+        for (int i : arrayList) {
+            curFrequentSet.add(i);
+        }
+    }
+
+    private static void writeOutputFile(String outputFilename, LinkedHashMap<Integer, ItemsetStructClass> validatedItemSetMap) throws IOException {
+        Set<Integer> keySet = validatedItemSetMap.keySet();
         Iterator itr = keySet.iterator();
         BufferedWriter bfw = new BufferedWriter(new FileWriter(outputFilename, true));
         while (itr.hasNext()) {
-            String str = (String) itr.next();
-            int value = validatedItemSetMap.get(str);
-            bfw.write(str + value + "\n");
+            ItemsetStructClass curItemResult = validatedItemSetMap.get(itr.next());
+            ArrayList<Integer> curArrayList = curItemResult.itemArray;
+            int countValue = curItemResult.count;
+            //System.out.println("Writing array: " + curArrayList + ", count: " + countValue);
+            String str = convertArrayToString(curArrayList);
+            str += countValue;
+            bfw.write(str + "\n");
             bfw.flush();
-            System.out.println(str + value);
+            //System.out.println(str + value);
         }
         bfw.close();
     }
 
-    private static String convertArrayToString(ArrayList<Integer> firstCombinationArray) {
+    private static String convertArrayToString(ArrayList<Integer> arrayList) {
         String result = "{";
-        for (int i = 0; i < firstCombinationArray.size() - 1; i++) {
-            result += firstCombinationArray.get(i) + ",";
+        for (int i = 0; i < arrayList.size() - 1; i++) {
+            result += arrayList.get(i) + ",";
         }
-        result += firstCombinationArray.get(firstCombinationArray.size() - 1) + "} - ";
+        result += arrayList.get(arrayList.size() - 1) + "} - ";
         return result;
     }
 
@@ -115,35 +146,49 @@ public class ItemCombination {
         binaryShiftArray[i + 1] = temp;
     }
 
-    private static boolean testIsCurCombinationPassed(ArrayList<Integer> curCombinatioArray){
-        boolean result = false;
-        if(getNumOfMatchedSet(curCombinatioArray) > 0){
-            result = true;
-        }
-        return result;
-    }
-
-
     private static int getNumOfMatchedSet(ArrayList<Integer> curCombinatioArray) {
-        //System.out.println("prepare to valide array: " + curCombinatioArray);
-        int treeArraySize = ProjectMainClass.dataSetTreeArray.size();
         int counter = 0;
-        for (int i = 0; i < treeArraySize; i++) {
-            boolean isAllIncluded = true;
-            TreeSet<Integer> curTreeSet = ProjectMainClass.dataSetTreeArray.get(i).treeSet;
-            for (int j = 0; j < curCombinatioArray.size(); j++) {
-                if (!curTreeSet.contains(curCombinatioArray.get(j))) {
-                    isAllIncluded = false;
-                    break;
+        //System.out.println("prepare to valide array: " + curCombinatioArray);
+        if(compareArrayWithLastRound(curCombinatioArray)) {
+            int treeArraySize = ProjectMainClass.dataSetTreeArray.size();
+            for (int i = 0; i < treeArraySize; i++) {
+                boolean isAllIncluded = true;
+                TreeSet<Integer> curTreeSet = ProjectMainClass.dataSetTreeArray.get(i).treeSet;
+                if (curCombinatioArray.size() > curTreeSet.size()) {
+                    continue;
+                } else {
+                    for (int j = 0; j < curCombinatioArray.size(); j++) {
+                        if (!curTreeSet.contains(curCombinatioArray.get(j))) {
+                            isAllIncluded = false;
+                            break;
+                        }
+                    }
                 }
+                if (isAllIncluded) {
+                    counter++;
+                }
+                //System.out.println(curCombinatioArray + ", counter: " + counter);
+                isAllIncluded = true;
             }
-            if(isAllIncluded) {
-                counter++;
-            }
-            //System.out.println(curCombinatioArray + ", counter: " + counter);
-            isAllIncluded = true;
         }
         return counter;
+    }
+
+    private static boolean compareArrayWithLastRound(ArrayList<Integer> curCombinatioArray) {
+        boolean result = false;
+        String curString = "";
+        for(int num: curCombinatioArray){
+            curString += num;
+        }
+        for(int i = 0; i < lastRoundValidatedCombination.size(); i++){
+            String strInLastRound = lastRoundValidatedCombination.get(i);
+            //System.out.println("str in last round: " + strInLastRound + ", curString: " + curString);
+            if(curString.contains(strInLastRound)){
+                result = true;
+                break;
+            }
+        }
+        return result;
     }
 
     private static boolean isContainOneZero(int[] binaryShiftArray) {

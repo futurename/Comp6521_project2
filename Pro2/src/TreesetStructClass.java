@@ -1,10 +1,10 @@
 import java.util.TreeSet;
 
-public class DataSetStructClass {
+public class TreesetStructClass {
     //int basketSeq;
     TreeSet<Integer> treeSet;
 
-    DataSetStructClass(int seq){
+    TreesetStructClass(int seq){
         //basketSeq = seq;
         treeSet = new TreeSet<>();
     }
