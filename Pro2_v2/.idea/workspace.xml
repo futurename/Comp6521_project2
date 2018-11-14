@@ -3,17 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6508010f-996b-488a-a31d-b4e3b0fa0fe5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../Pro2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Pro2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Pro2/out/production/Pro2/ItemCombination.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Pro2/out/production/Pro2/ItemCombination.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Pro2/out/production/Pro2/ProjectMainClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Pro2/out/production/Pro2/ProjectMainClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Pro2/output100_25.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Pro2/output100_25.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Pro2/output50_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Pro2/output50_5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Pro2/src/ProjectMainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Pro2/src/ProjectMainClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Pro2/test_50_10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Pro2/test_50_20.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Pro2_v2/MainClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pro2_v2/MainClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ValidFreqItemSetClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output100_25.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output50_5.txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,12 +38,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="5970" />
+          <entry key="java" value="8432" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5970" />
+          <entry key="JAVA" value="8432" />
         </counts>
       </usages-collector>
     </session>
@@ -60,8 +53,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MainClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="135" column="49" selection-start-line="135" selection-start-column="49" selection-end-line="135" selection-end-column="49" />
+            <state relative-caret-position="255">
+              <caret line="111" column="60" selection-start-line="111" selection-start-column="60" selection-end-line="111" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -137,7 +130,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542214606569" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542224573655" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Pro2" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -218,12 +211,12 @@
       <workItem from="1542154890772" duration="5907000" />
       <workItem from="1542162747850" duration="2958000" />
       <workItem from="1542203118414" duration="107000" />
-      <workItem from="1542204438962" duration="10675000" />
+      <workItem from="1542204438962" duration="19938000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19647000" />
+    <option name="totallyTimeSpent" value="28910000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -269,8 +262,8 @@
     <entry file="file://$PROJECT_DIR$/src/ValidFreqItemSetClass.java" />
     <entry file="file://$PROJECT_DIR$/src/MainClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="135" column="49" selection-start-line="135" selection-start-column="49" selection-end-line="135" selection-end-column="49" />
+        <state relative-caret-position="255">
+          <caret line="111" column="60" selection-start-line="111" selection-start-column="60" selection-end-line="111" selection-end-column="60" />
         </state>
       </provider>
     </entry>

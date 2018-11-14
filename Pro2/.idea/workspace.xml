@@ -3,17 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="dd0ea434-dd50-4703-814f-73799bc6f462" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pro2/ItemCombination.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pro2/ItemCombination.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pro2/ProjectMainClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pro2/ProjectMainClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output100_25.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output100_25.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output50_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output50_5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjectMainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjectMainClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_50_10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_50_20.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Pro2_v2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Pro2_v2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Pro2_v2/out/production/Pro2_v2/MainClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Pro2_v2/out/production/Pro2_v2/MainClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Pro2_v2/src/MainClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Pro2_v2/src/ValidFreqItemSetClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/output100_25.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/output50_5.txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
