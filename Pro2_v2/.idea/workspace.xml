@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6508010f-996b-488a-a31d-b4e3b0fa0fe5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../Pro2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Pro2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pro2_v2/MainClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pro2_v2/MainClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output100_25.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output50_5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output150_30.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainClass.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,12 +36,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="8432" />
+          <entry key="java" value="8445" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8432" />
+          <entry key="JAVA" value="8445" />
         </counts>
       </usages-collector>
     </session>
@@ -53,8 +51,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MainClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="111" column="60" selection-start-line="111" selection-start-column="60" selection-end-line="111" selection-end-column="60" />
+            <state relative-caret-position="119">
+              <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -130,7 +128,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542224573655" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542225803660" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Pro2" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -211,12 +209,12 @@
       <workItem from="1542154890772" duration="5907000" />
       <workItem from="1542162747850" duration="2958000" />
       <workItem from="1542203118414" duration="107000" />
-      <workItem from="1542204438962" duration="19938000" />
+      <workItem from="1542204438962" duration="20984000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28910000" />
+    <option name="totallyTimeSpent" value="29956000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -262,8 +260,8 @@
     <entry file="file://$PROJECT_DIR$/src/ValidFreqItemSetClass.java" />
     <entry file="file://$PROJECT_DIR$/src/MainClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="111" column="60" selection-start-line="111" selection-start-column="60" selection-end-line="111" selection-end-column="60" />
+        <state relative-caret-position="119">
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
         </state>
       </provider>
     </entry>

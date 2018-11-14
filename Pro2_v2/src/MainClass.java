@@ -7,8 +7,8 @@ public class MainClass {
     static ArrayList<TreeSet<Integer>> dataTreeArray;
     static final int NUM_RANGE = 99;
     static int[] frequentNumArray = new int[NUM_RANGE + 1];
-    static final int BASKET_NUM = 150;
-    static final int SUPPORT_NUM = 30;
+    static final int BASKET_NUM = 100;
+    static final int SUPPORT_NUM = 25;
     static final String INPUT_FILE = "input" + BASKET_NUM + "_" + SUPPORT_NUM + ".txt";
     static final String OUTPUT_FILE = "output" + BASKET_NUM + "_" + SUPPORT_NUM + ".txt";
     static ArrayList<LinkedHashMap<String, Integer>> freqCombArrayMap = new ArrayList<>();
@@ -17,13 +17,8 @@ public class MainClass {
     public static void main(String[] args) throws IOException {
         long startTime = System.currentTimeMillis();
         dataTreeArray = new ArrayList<>();
-
         createTreeSet();
-
         passOneProcess();
-
-        //System.out.println("pass one, freq: " + curFreqItem);
-
         passTwoProcess();
         int maxSizeOfFreqItem = curFreqItem.size();
         for (int i = 3; i <= maxSizeOfFreqItem; i++) {
@@ -109,7 +104,7 @@ public class MainClass {
                     Iterator<String> subSetItr = allSubSets.iterator();
                     boolean isAllContained = true;
                     while(subSetItr.hasNext()){
-                        if(!set.contains(subSetItr.next())){
+                        if(!previousValidMap.containsKey(subSetItr.next())){
                             isAllContained = false;
                             break;
                         }
@@ -197,37 +192,6 @@ public class MainClass {
         return result;
     }
 
-    private static void countSubset(ArrayList<String> genAllCombSetToArray, LinkedHashSet<String> keySet, int numOfItems, HashMap<String, Integer> map) {
-        //long startTime = System.currentTimeMillis();
-        //System.out.println("counter size: " + genAllCombSetToArray.size());
-        int genSize = genAllCombSetToArray.size();
-        for(int i = 0; i < genSize; i++){
-            String str = genAllCombSetToArray.get(i);
-            //System.out.println("cur gen string: " + str);
-            LinkedHashSet<String> allSubsetList = getAllSubsetList(str);
-            //System.out.println("all gen subString: " + allSubsetList);
-            boolean isAllContain = true;
-            Iterator<String> itr = allSubsetList.iterator();
-            while(itr.hasNext()){
-                String curSubString = itr.next();
-                if(!str.contains(curSubString)){
-                    isAllContain = false;
-                    break;
-                }
-            }
-            if(isAllContain){
-                genAllCombSetToArray.remove(str);
-                i--;
-                genSize--;
-               // System.out.println("remove: " + str + ", i: " + i + ", genSize: " + genSize);
-            }
-        }
-        /*long endTime = System.currentTimeMillis();
-        long runningTime = endTime - startTime;
-        System.out.println("Running time in get all comb set before prune process: " + runningTime + " ms");*/
-        //System.out.println("freqset after prune: " + genAllCombSetToArray);
-    }
-
     private static LinkedHashSet<String> getAllSubsetList(String str) {
         LinkedHashSet<String> result = new LinkedHashSet<>();
         String[] strArray = str.split(",");
@@ -256,32 +220,7 @@ public class MainClass {
         return result;
     }
 
-  /*  private static void pruneProcess(ArrayList<String> genAllCombSetToArray, int[] counterArray, int numOfItems) {
-        *//*for(int i = 0; i < counterArray.length; i++){
-            System.out.printf("%d, ", counterArray[i]);
-        }
-        System.out.println();*//*
-        long startTime = System.currentTimeMillis();
-        //System.out.println("size of genAll before prune: " + genAllCombSetToArray.size());
-        ArrayList<Integer> temList = new ArrayList();
-        for (int i = 0; i < counterArray.length; i++) {
-            if (counterArray[i] < numOfItems) {
-                temList.add(i);
-            }
-        }
-        if (!temList.isEmpty()) {
-            //System.out.println("item size: " + numOfItems + ", removing from positions: " + temList);
-            for (int i = 0; i < temList.size(); i++) {
-                //System.out.println("item size: " + numOfItems + ", remove set from genAll:" + genAllCombSetToArray.get(temList.get(i) - i));
-                genAllCombSetToArray.remove(temList.get(i) - i);
-            }
-        }
-        //System.out.println("item size: " + numOfItems + ", size after prune: " + genAllCombSetToArray.size());
-        long endTime = System.currentTimeMillis();
-        long runningTime = endTime - startTime;
-        System.out.println("Running time in prune process: " + runningTime + " ms");
-    }
-*/
+
     private static int getLastNum(String str) {
         String[] strArray = str.split(",");
         int result = Integer.parseInt(strArray[strArray.length - 1]);
@@ -344,11 +283,6 @@ public class MainClass {
             }
         }
         frequentNumArray = new int[NUM_RANGE + 1];
-        /*System.out.println("pass one, after reseting freqnumarray: ");
-        for(int i = 0; i < frequentNumArray.length; i++){
-            System.out.printf("%d, " , frequentNumArray[i]);
-        }
-        System.out.println();*/
     }
 
     private static void createTreeSet() throws IOException {
