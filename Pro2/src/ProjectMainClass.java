@@ -8,12 +8,15 @@ public class ProjectMainClass {
     static int totalNum;
     static int supportNum;
     static int ITEM_RANGE = 99;
+    static final int BASKET_NUM = 50;
+    static final int SUPPORT_NUM = 5;
+    static final String OUTPUT_FILE = "output" + BASKET_NUM + "_" + SUPPORT_NUM + ".txt";
+    static final String INPUT_FILE = "input" + BASKET_NUM + "_" + SUPPORT_NUM + ".txt";
     static ArrayList<TreesetStructClass> dataSetTreeArray;
-    static final String OUPUT_FILENAME = "./output.txt";
     static ArrayList<Integer> frequentItemArray;
 
     public static void main(String[] args) throws IOException {
-        BufferedReader bfr = new BufferedReader(new FileReader("./input1.txt"));
+        BufferedReader bfr = new BufferedReader(new FileReader(INPUT_FILE));
         String firstLine = bfr.readLine();
         String[] firstLineArr = firstLine.split(" ");
         totalNum = Integer.parseInt(firstLineArr[0]);
@@ -69,17 +72,15 @@ public class ProjectMainClass {
             ItemCombination.testItemCombination(frequentItemArray, i);
             frequentItemArray = new ArrayList<>(ItemCombination.curFrequentSet);
             maxSizeOfItemSets = frequentItemArray.size();
-            //System.out.println("Frequent item for next round: " + frequentItemArray);
-            //System.out.println("max size for next round; " + maxSizeOfItemSets);
-            System.out.println("i value: " + i);
-            //resizeDataSetTreeArray(dataSetTreeArray,frequentItemArray);
-            //printTreeSet(dataSetTreeArray);
-            //writeToFile("resized_datatree.txt", dataSetTreeArray);
+            System.out.println("i value: " + i + ", maxsize: " + maxSizeOfItemSets);
         }
 
         long endTime = System.currentTimeMillis();
         System.out.println("freemem at end: " + Runtime.getRuntime().freeMemory());
-        System.out.println("Time spent: " + (endTime - startTime));
+        long runningTime = endTime - startTime;
+        System.out.println("Time spent: " + runningTime);
+        writeRunningTimeToFile(runningTime);
+
     }
 
     private static ArrayList<String> convertIntArrayToStrArray(ArrayList<Integer> frequentItemArray) {
@@ -117,6 +118,13 @@ public class ProjectMainClass {
 
             }
         }
+    }
+
+    static void writeRunningTimeToFile(long time) throws IOException {
+        BufferedWriter bfw = new BufferedWriter(new FileWriter(OUTPUT_FILE,true));
+        bfw.newLine();
+        bfw.write("total running time: " + time + " ms");
+        bfw.close();
     }
 
     static void writeToFile(String filename, ArrayList<TreesetStructClass> arrayList) throws IOException {

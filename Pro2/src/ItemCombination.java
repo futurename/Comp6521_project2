@@ -46,7 +46,7 @@ public class ItemCombination {
                 //System.out.println("add set: " + itemSetKey + ", count: " + value);
             }
         }
-        writeOutputFile(ProjectMainClass.OUPUT_FILENAME, validatedItemSetMap);
+        writeOutputFile(ProjectMainClass.OUTPUT_FILE, validatedItemSetMap);
     }
 
     private static void addCombToRefArray(ArrayList<Integer> arrayList) {
@@ -66,8 +66,8 @@ public class ItemCombination {
         }
         curItemStruct.count = value;
         map.put(++mapsetCounter, curItemStruct);
-        System.out.println("adding itemset - counter: " + mapsetCounter + ", itemset: " + curItemStruct.itemArray +
-                ", count: " +curItemStruct.count);
+        /*System.out.println("adding itemset - counter: " + mapsetCounter + ", itemset: " + curItemStruct.itemArray +
+                ", count: " +curItemStruct.count);*/
 
     }
 
