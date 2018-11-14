@@ -72,7 +72,7 @@ public class ProjectMainClass {
             ItemCombination.testItemCombination(frequentItemArray, i);
             frequentItemArray = new ArrayList<>(ItemCombination.curFrequentSet);
             maxSizeOfItemSets = frequentItemArray.size();
-            System.out.println("i value: " + i + ", maxsize: " + maxSizeOfItemSets);
+            System.out.println("i value: " + i + ", maxsize at the end of the round: " + maxSizeOfItemSets);
         }
 
         long endTime = System.currentTimeMillis();
@@ -80,7 +80,6 @@ public class ProjectMainClass {
         long runningTime = endTime - startTime;
         System.out.println("Time spent: " + runningTime);
         writeRunningTimeToFile(runningTime);
-
     }
 
     private static ArrayList<String> convertIntArrayToStrArray(ArrayList<Integer> frequentItemArray) {
@@ -103,21 +102,6 @@ public class ProjectMainClass {
             }
         }
         System.out.println();
-    }
-
-    private static void resizeDataSetTreeArray(ArrayList<TreesetStructClass> dataSetTreeArray, ArrayList<Integer> frequentItemArray) {
-        int arrayLength = dataSetTreeArray.size();
-        for (TreesetStructClass treeSet : dataSetTreeArray) {
-            Iterator itr = treeSet.treeSet.iterator();
-            while (itr.hasNext()) {
-                int curValue = (int) itr.next();
-                if (!frequentItemArray.contains(curValue)) {
-                    treeSet.treeSet.remove(curValue);
-                    System.out.println("remove value: " + curValue);
-                }
-
-            }
-        }
     }
 
     static void writeRunningTimeToFile(long time) throws IOException {
