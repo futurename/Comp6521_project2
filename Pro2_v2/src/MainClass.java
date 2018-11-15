@@ -7,8 +7,8 @@ public class MainClass {
     static ArrayList<TreeSet<Integer>> dataTreeArray;
     static final int NUM_RANGE = 99;
     static int[] frequentNumArray = new int[NUM_RANGE + 1];
-    static final int BASKET_NUM = 100;
-    static final int SUPPORT_NUM = 25;
+    static final int BASKET_NUM = 150;
+    static final int SUPPORT_NUM = 30;
     static final String INPUT_FILE = "input" + BASKET_NUM + "_" + SUPPORT_NUM + ".txt";
     static final String OUTPUT_FILE = "output" + BASKET_NUM + "_" + SUPPORT_NUM + ".txt";
     static ArrayList<LinkedHashMap<String, Integer>> freqCombArrayMap = new ArrayList<>();
@@ -85,6 +85,7 @@ public class MainClass {
         //System.out.println("preKeySet: " + keySet);
 
         for (String str : keySet) {
+            /*long startTime = System.currentTimeMillis();*/
             String preCombString = str;
             //System.out.println("---------curPreCombString: " + preCombString);
             String[] preNumbers = preCombString.split(",");
@@ -103,19 +104,23 @@ public class MainClass {
                     LinkedHashSet<String> allSubSets = getAllSubsetList(genNewString);
                     Iterator<String> subSetItr = allSubSets.iterator();
                     boolean isAllContained = true;
-                    while(subSetItr.hasNext()){
-                        if(!previousValidMap.containsKey(subSetItr.next())){
+                    while (subSetItr.hasNext()) {
+                        if (!previousValidMap.containsKey(subSetItr.next())) {
                             isAllContained = false;
                             break;
                         }
                     }
-                    if(isAllContained) {
+                    if (isAllContained) {
                         genAllCombSet.add(genNewString);
                         tempAllNumberArray[curNum] = -1;
-                       //System.out.println("adding new itemset: " + genNewString);
+                        //System.out.println("adding new itemset: " + genNewString);
                     }
                 }
             }
+
+            /*long endTime = System.currentTimeMillis();
+            long runningTime = endTime - startTime;
+            System.out.println("Running time: " + runningTime + " ms");*/
         }
         System.out.println("genall size:" + genAllCombSet.size() + ", curFreqsize: " + curFreqItem.size() + ", keyset size: " + keySet.size());
         ArrayList<String> genAllCombSetToArray = new ArrayList<>(genAllCombSet);
@@ -137,20 +142,6 @@ public class MainClass {
         return result;
     }
 
-    private static LinkedHashMap<String, ArrayList<Integer>> getLinkedHashMapFromLinkedHashSet(LinkedHashSet<String> genAllCombSet) {
-        LinkedHashMap<String, ArrayList<Integer>> result = new LinkedHashMap<>();
-        ArrayList<String> tempList = new ArrayList<>(genAllCombSet);
-        for (String str : tempList) {
-            String[] numArray = str.split(",");
-            ArrayList<Integer> numList = new ArrayList<>();
-            for (int i = 0; i < numArray.length; i++) {
-                numList.add(Integer.parseInt(numArray[i]));
-            }
-            result.put(str, numList);
-        }
-        return result;
-    }
-
     private static void genFreqItemInMultiPass() {
         curFreqItem = new ArrayList<>();
         for (int i = 0; i < frequentNumArray.length; i++) {
@@ -162,21 +153,35 @@ public class MainClass {
     }
 
     private static LinkedHashMap<String, Integer> countPrunedComb(ArrayList<String> prunedGenCombArray) {
+        //System.out.println("pruned list:" + prunedGenCombArray);
+        long startTime = System.currentTimeMillis();
         LinkedHashMap<String, Integer> result = new LinkedHashMap<>();
         for (int k = 0; k < prunedGenCombArray.size(); k++) {
             String str = prunedGenCombArray.get(k);
             String[] curNumberArray = str.split(",");
             int count = 0;
+            //int countIgnored = 0;
             for (int i = 0; i < dataTreeArray.size(); i++) {
                 TreeSet<Integer> curTree = dataTreeArray.get(i);
                 boolean isAllFound = true;
-                for (int j = 0; j < curNumberArray.length; j++) {
-                    int curNum = Integer.parseInt(curNumberArray[j]);
-                    if (!curTree.contains(curNum)) {
-                        isAllFound = false;
-                        break;
+                if (curTree.size() < curNumberArray.length || curTree.first() > Integer.parseInt(curNumberArray[0])
+                        || curTree.last() < Integer.parseInt(curNumberArray[curNumberArray.length - 1])) {
+                    //countIgnored++;
+                    //* ArrayList<Integer> temList = getListFromArray(curNumberArray);*//*
+                    //*System.out.println("ignored--->" + i + ","  + curTree.size() + ", " + (curTree.first() > Integer.parseInt(curNumberArray[0]))
+                    //+ ", " + (curTree.last() < Integer.parseInt(curNumberArray[curNumberArray.length -1])) + ", " + (curTree.size() < curNumberArray.length) + "," + temList)*//*;
+                    //System.out.println(countIgnored);
+                    continue;
+                } else {
+                    for (int j = 0; j < curNumberArray.length; j++) {
+                        int curNum = Integer.parseInt(curNumberArray[j]);
+                        if (!curTree.contains(curNum)) {
+                            isAllFound = false;
+                            break;
+                        }
                     }
                 }
+
                 if (isAllFound) {
                     count++;
                 }
@@ -188,23 +193,29 @@ public class MainClass {
                     frequentNumArray[pos]++;
                 }
             }
+
+
         }
+
+        long endTime = System.currentTimeMillis();
+        long runningTime = endTime - startTime;
+        System.out.println("Running time: " + runningTime + " ms");
         return result;
     }
 
     private static LinkedHashSet<String> getAllSubsetList(String str) {
         LinkedHashSet<String> result = new LinkedHashSet<>();
         String[] strArray = str.split(",");
-        for(int i = strArray.length - 1; i >= 0; i--){
+        for (int i = strArray.length - 1; i >= 0; i--) {
             String curStr = "";
-            for(int j = 0; j < strArray.length; j++){
-                if(i == j){
+            for (int j = 0; j < strArray.length; j++) {
+                if (i == j) {
                     continue;
-                }else {
+                } else {
                     curStr += strArray[j] + ",";
                 }
             }
-            curStr= curStr.substring(0, curStr.length() - 1);
+            curStr = curStr.substring(0, curStr.length() - 1);
             //System.out.println("gen all sub set: " + curStr);
             result.add(curStr);
         }
