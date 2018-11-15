@@ -1,5 +1,3 @@
-import jdk.nashorn.internal.runtime.arrays.ArrayLikeIterator;
-
 import java.io.*;
 import java.util.*;
 
@@ -11,7 +9,7 @@ public class MainClass {
     static final int SUPPORT_NUM = 30;
     static final String INPUT_FILE = "input" + BASKET_NUM + "_" + SUPPORT_NUM + ".txt";
     static final String OUTPUT_FILE = "output" + BASKET_NUM + "_" + SUPPORT_NUM + ".txt";
-    static ArrayList<LinkedHashMap<String, Integer>> freqCombArrayMap = new ArrayList<>();
+    static ArrayList<TreeMap<String, Integer>> freqCombArrayMap = new ArrayList<>();
     static ArrayList<Integer> curFreqItem;
 
     public static void main(String[] args) throws IOException {
@@ -34,7 +32,7 @@ public class MainClass {
     }
 
     private static void passTwoProcess() throws IOException {
-        LinkedHashMap<String, Integer> curValidComb = new LinkedHashMap<>();
+        TreeMap<String, Integer> curValidComb = new TreeMap<>();
         for (int i = 0; i < curFreqItem.size(); i++) {
             int numOne = curFreqItem.get(i);
             int numTwo, counter = 0;
@@ -72,9 +70,9 @@ public class MainClass {
     }
 
     private static void multiPassProcess(int numOfItems) throws IOException {
-        LinkedHashSet<String> genAllCombSet = new LinkedHashSet<>();
-        LinkedHashMap<String, Integer> previousValidMap = freqCombArrayMap.get(0);
-        HashMap<String, Integer> freqStartEndPosMap = new HashMap<>();
+        TreeSet<String> genAllCombSet = new TreeSet<>();
+        TreeMap<String, Integer> previousValidMap = freqCombArrayMap.get(0);
+        TreeMap<String, Integer> freqStartEndPosMap = new TreeMap<>();
         Set<String> set = previousValidMap.keySet();
         Iterator<String> itr = set.iterator();
         LinkedHashSet<String> keySet = new LinkedHashSet<>();
@@ -122,11 +120,11 @@ public class MainClass {
             long runningTime = endTime - startTime;
             System.out.println("Running time: " + runningTime + " ms");*/
         }
-        System.out.println("genall size:" + genAllCombSet.size() + ", curFreqsize: " + curFreqItem.size() + ", keyset size: " + keySet.size());
+        //System.out.println("genall size:" + genAllCombSet.size() + ", curFreqsize: " + curFreqItem.size() + ", keyset size: " + keySet.size());
         ArrayList<String> genAllCombSetToArray = new ArrayList<>(genAllCombSet);
         //System.out.println("gened comb array: " + genAllCombSetToArray);
         //countSubset(genAllCombSetToArray, keySet, numOfItems, freqStartEndPosMap);
-        LinkedHashMap<String, Integer> curValidCombMap = countPrunedComb(genAllCombSetToArray);
+        TreeMap<String, Integer> curValidCombMap = countPrunedComb(genAllCombSetToArray);
         freqCombArrayMap.clear();
         freqCombArrayMap.add(curValidCombMap);
         genFreqItemInMultiPass();
@@ -152,10 +150,10 @@ public class MainClass {
         }
     }
 
-    private static LinkedHashMap<String, Integer> countPrunedComb(ArrayList<String> prunedGenCombArray) {
+    private static TreeMap<String, Integer> countPrunedComb(ArrayList<String> prunedGenCombArray) {
         //System.out.println("pruned list:" + prunedGenCombArray);
         long startTime = System.currentTimeMillis();
-        LinkedHashMap<String, Integer> result = new LinkedHashMap<>();
+        TreeMap<String, Integer> result = new TreeMap<>();
         for (int k = 0; k < prunedGenCombArray.size(); k++) {
             String str = prunedGenCombArray.get(k);
             String[] curNumberArray = str.split(",");
@@ -193,10 +191,7 @@ public class MainClass {
                     frequentNumArray[pos]++;
                 }
             }
-
-
         }
-
         long endTime = System.currentTimeMillis();
         long runningTime = endTime - startTime;
         System.out.println("Running time: " + runningTime + " ms");
@@ -238,7 +233,7 @@ public class MainClass {
         return result;
     }
 
-    private static void writeToFile(LinkedHashMap<String, Integer> map) throws IOException {
+    private static void writeToFile(TreeMap<String, Integer> map) throws IOException {
         Set<String> set = map.keySet();
         Iterator<String> itr = set.iterator();
         BufferedWriter bfw = new BufferedWriter(new FileWriter(OUTPUT_FILE, true));

@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e577b52d-16fa-425c-9e33-b950779960cf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc (1).xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc (1).xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace (1).xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace (1).xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input15000_100.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Pro2_v2/MainClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pro2_v2/MainClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pro2_v2/MainClass.zip" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pro2_v2/MainClass.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output100_25.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output100_25.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output150_30.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output150_30.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output50_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output50_5.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainClass.zip" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainClass.zip" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,7 +22,7 @@
     <session id="-926756191">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.23" value="2" />
@@ -43,12 +43,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="4" />
-          <entry key="java" value="7603" />
+          <entry key="java" value="7752" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7603" />
+          <entry key="JAVA" value="7752" />
           <entry key="PLAIN_TEXT" value="4" />
         </counts>
       </usages-collector>
@@ -60,12 +60,18 @@
         <entry file="file://$PROJECT_DIR$/src/MainClass.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="126">
-              <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+              <caret line="90" column="62" selection-start-line="90" selection-start-column="62" selection-end-line="90" selection-end-column="62" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>hashmap</find>
+      <find>treeset</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -137,7 +143,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542243168049" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542245331149" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Pro2" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -186,16 +192,15 @@
       <workItem from="1542203350118" duration="985000" />
       <workItem from="1542229339861" duration="1592000" />
       <workItem from="1542234764083" duration="2951000" />
-      <workItem from="1542237829338" duration="3323000" />
+      <workItem from="1542237829338" duration="5198000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19732000" />
+    <option name="totallyTimeSpent" value="21607000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1753" height="954" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20707965" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -206,7 +211,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34629405" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34629405" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -260,7 +265,7 @@
     <entry file="file://$PROJECT_DIR$/src/MainClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
-          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+          <caret line="90" column="62" selection-start-line="90" selection-start-column="62" selection-end-line="90" selection-end-column="62" />
         </state>
       </provider>
     </entry>
