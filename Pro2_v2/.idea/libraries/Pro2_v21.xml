@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Pro2_v21">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/production/Pro2_v2/MainClassTree.zip!/" />
+      <root url="jar://$PROJECT_DIR$/out/production/Pro2_v2/MainClass.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
