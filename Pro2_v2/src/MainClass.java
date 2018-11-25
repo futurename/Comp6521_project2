@@ -118,9 +118,7 @@ public class MainClass {
                 }
             }
 
-            /*long endTime = System.currentTimeMillis();
-            long runningTime = endTime - startTime;
-            System.out.println("Running time: " + runningTime + " ms");*/
+
         }
         //System.out.println("genall size:" + genAllCombSet.size() + ", curFreqsize: " + curFreqItem.size() + ", keyset size: " + keySet.size());
         ArrayList<String> genAllCombSetToArray = new ArrayList<>(genAllCombSet);
@@ -132,14 +130,6 @@ public class MainClass {
         genFreqItemInMultiPass();
         writeToFile(curValidCombMap);
         frequentNumArray = new int[NUM_RANGE + 1];
-    }
-
-    private static ArrayList<Integer> getListFromArray(String[] array) {
-        ArrayList<Integer> result = new ArrayList<>();
-        for (int i = 0; i < array.length; i++) {
-            result.add(Integer.parseInt(array[i]));
-        }
-        return result;
     }
 
     private static void genFreqItemInMultiPass() {
@@ -166,11 +156,7 @@ public class MainClass {
                 boolean isAllFound = true;
                 if (curTree.size() < curNumberArray.length || curTree.first() > Integer.parseInt(curNumberArray[0])
                         || curTree.last() < Integer.parseInt(curNumberArray[curNumberArray.length - 1])) {
-                    //countIgnored++;
-                    //* ArrayList<Integer> temList = getListFromArray(curNumberArray);*//*
-                    //*System.out.println("ignored--->" + i + ","  + curTree.size() + ", " + (curTree.first() > Integer.parseInt(curNumberArray[0]))
-                    //+ ", " + (curTree.last() < Integer.parseInt(curNumberArray[curNumberArray.length -1])) + ", " + (curTree.size() < curNumberArray.length) + "," + temList)*//*;
-                    //System.out.println(countIgnored);
+
                     continue;
                 } else {
                     for (int j = 0; j < curNumberArray.length; j++) {
@@ -225,13 +211,6 @@ public class MainClass {
         for (int i = 0; i < temStrList.length; i++) {
             result.add(Integer.parseInt(temStrList[i]));
         }
-        return result;
-    }
-
-
-    private static int getLastNum(String str) {
-        String[] strArray = str.split(",");
-        int result = Integer.parseInt(strArray[strArray.length - 1]);
         return result;
     }
 
@@ -315,19 +294,4 @@ public class MainClass {
         }
     }
 
-    private static void writeTreeToFile(ArrayList<TreeSet<Integer>> tree) throws IOException {
-        BufferedWriter bfw = new BufferedWriter(new FileWriter("sortedTreeSet.txt"));
-        for (int i = 0; i < tree.size(); i++) {
-            TreeSet<Integer> curTreeSet = tree.get(i);
-            Iterator<Integer> itr = curTreeSet.iterator();
-            String curLine = (i + 1) + ": ";
-            while (itr.hasNext()) {
-                int curNum = itr.next();
-                curLine += curNum + ",";
-            }
-            bfw.write(curLine);
-            bfw.newLine();
-        }
-        bfw.close();
-    }
 }
