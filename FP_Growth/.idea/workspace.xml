@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8b368804-d8ed-4be6-bf21-9cc536dcc90a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cache-conscious Frequent Pattern Mining on a Modern.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Enhancing-FP-Growth-Performance-Using-Multi-threading-based-on-Comparative-Study.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGrowth-master.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGrowth-master/FPGrowth-master/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGrowth-master/FPGrowth-master/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGrowth-master/FPGrowth-master/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGrowth-master/FPGrowth-master/src/main/java/pkg/FPTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGrowth-master/FPGrowth-master/src/main/java/pkg/Project 1 FP-growth.pages" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGrowth-master/FPGrowth-master/src/main/resources/Sample_1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGrowth-master/FPGrowth-master/src/main/resources/Sample_2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGrowth-master/FPGrowth-master/src/main/resources/Sample_3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGrowth-master/FPGrowth-master/src/main/resources/log4j2.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGrowth-master/FPGrowth-master/src/main/resources/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGrowth-master/FPGrowth-master/src/main/resources/test.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGrowth-master/__MACOSX/._FPGrowth-master" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGrowth-master/__MACOSX/FPGrowth-master/._.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGrowth-master/__MACOSX/FPGrowth-master/._README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGrowth-master/__MACOSX/FPGrowth-master/._pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGrowth-master/__MACOSX/FPGrowth-master/._src" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGrowth-master/__MACOSX/FPGrowth-master/src/._main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGrowth-master/__MACOSX/FPGrowth-master/src/main/._java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGrowth-master/__MACOSX/FPGrowth-master/src/main/._resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGrowth-master/__MACOSX/FPGrowth-master/src/main/java/._pkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGrowth-master/__MACOSX/FPGrowth-master/src/main/java/pkg/._FPTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGrowth-master/__MACOSX/FPGrowth-master/src/main/java/pkg/._Project 1 FP-growth.pages" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGrowth-master/__MACOSX/FPGrowth-master/src/main/resources/._Sample_1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGrowth-master/__MACOSX/FPGrowth-master/src/main/resources/._Sample_2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGrowth-master/__MACOSX/FPGrowth-master/src/main/resources/._Sample_3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGrowth-master/__MACOSX/FPGrowth-master/src/main/resources/._log4j2.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGrowth-master/__MACOSX/FPGrowth-master/src/main/resources/._readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPGrowth-master/__MACOSX/FPGrowth-master/src/main/resources/._test.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FPTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FP_Growth.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/input150_30.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Pro2_v2/input150_30.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input15_5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/input50_10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/input50_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Pro2_v2/input50_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FP_Growth/FP_Main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FP_Growth/FP_Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FP_Growth/TreeNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FP_Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frequent2.0hadoop.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Pro2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2/input25000_20000.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2/out/production/Pro2/ItemCombination.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Pro2/out/production/Pro2/ItemCombination.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2/out/production/Pro2/ProjectMainClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Pro2/out/production/Pro2/ProjectMainClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2/output25000_20000.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2/src/ProjectMainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Pro2/src/ProjectMainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/.idea/misc (1).xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Pro2_v2/.idea/misc (1).xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Pro2_v2/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/.idea/workspace (1).xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Pro2_v2/.idea/workspace (1).xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Pro2_v2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/15000_7000.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/1500_1000.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/1500_500.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/2500 1000.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/500_150.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/500_5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/50_10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/50_20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/Danseoutput2500_1000.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/Dense 2500 1000.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/Dense 25000 20000.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/Denseeoutput2500_1000.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/Report_Project2_group10.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/Sparse 2500 50.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/Sparse 25000 500.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/input10000.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/input10000_100.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/input1000_20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/input100_25.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/input15000_1000.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/input25000_100.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/input30_5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/other/input1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/other/input150_30.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/other/input50_5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/other/output150_30.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Pro2_v2/output150_30.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/out/production/Pro2_v2/GenerateDataSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/out/production/Pro2_v2/MainClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Pro2_v2/out/production/Pro2_v2/MainClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/out/production/Pro2_v2/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/output100_25.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/output50_5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/project2_group10.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/sortedTreeSet.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/sparseoutput25000_500.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/src/GenerateDataSet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/src/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Pro2_v2/src/MainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/src/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2_v2/summer_output150,30.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test Case Project 2/1000000_500000.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test Case Project 2/15000_7000.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test Case Project 2/1500_1000.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test Case Project 2/1500_500.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test Case Project 2/2500 1000.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test Case Project 2/500_150.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test Case Project 2/500_5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test Case Project 2/50_10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test Case Project 2/50_20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test Case Project 2/Dense 2500 1000.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test Case Project 2/Dense 25000 20000.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test Case Project 2/Sparse 2500 50.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test Case Project 2/Sparse 25000 500.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../]Frequent Pattern-growth Algorithm on Multi-core CPU and GPU.PDF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../一种基于 MapReduce 的频繁闭项集挖掘算法.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../一种有效的并行频繁子图挖掘算法.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../一种高效频繁子图挖掘算法.2007,18(10)_2469-2480.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../基于 FP-Tree 有效挖掘最大频繁项集.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../改进的FP-Growth算法及其分布式并行实现.pdf" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-732443087">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="9" />
+          <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.12" value="2" />
+          <entry key="project.open.time.13" value="2" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.9" value="2" />
+          <entry key="project.opened" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="iml" value="1" />
+          <entry key="java" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="IDEA_MODULE" value="1" />
+          <entry key="JAVA" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="18362" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="18362" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-1351676269">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TreeNode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/FP_Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="734">
+              <caret line="441" column="57" lean-forward="true" selection-start-line="441" selection-start-column="57" selection-end-line="441" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>INPU</find>
+      <find>buff</find>
+      <find>recurse ends</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../../../../../../Comp346 Project Git/comp354-project" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../../../COMP 354 Software Engineering/Project/comp354-project" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/FP_Tree.java" />
+        <option value="$PROJECT_DIR$/src/NodeStruct.java" />
+        <option value="$PROJECT_DIR$/src/TreeNode.java" />
+        <option value="$PROJECT_DIR$/src/FPTree.java" />
+        <option value="$PROJECT_DIR$/src/FP_Main.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1054" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="FP_Growth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FP_Growth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FP_Growth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FP_Growth" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542829741279" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Pro2_v2" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.FP_Main">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FPTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FPTree" />
+      <module name="FP_Growth" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FP_Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FP_Main" />
+      <module name="FP_Growth" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.FP_Main" />
+      <item itemvalue="Application.FPTree" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.FP_Main" />
+        <item itemvalue="Application.FPTree" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8b368804-d8ed-4be6-bf21-9cc536dcc90a" name="Default Changelist" comment="" />
+      <created>1542400927716</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1542400927716</updated>
+      <workItem from="1542400931149" duration="4329000" />
+      <workItem from="1542567896626" duration="239000" />
+      <workItem from="1542641550928" duration="21692000" />
+      <workItem from="1542669797334" duration="20845000" />
+      <workItem from="1542721870503" duration="605000" />
+      <workItem from="1542772932238" duration="715000" />
+      <workItem from="1542808361211" duration="10117000" />
+      <workItem from="1542820839415" duration="960000" />
+      <workItem from="1542826060619" duration="3853000" />
+      <workItem from="1542830593430" duration="819000" />
+      <workItem from="1543081738139" duration="370000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="64544000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1753" height="954" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17699115" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.37424058" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.41" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3288889" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/FP_Tree.java" />
+    <entry file="file://$PROJECT_DIR$/FP_Growth.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NodeStruct.java" />
+    <entry file="file://$PROJECT_DIR$/src/FPTree.java" />
+    <entry file="file://$PROJECT_DIR$/src/TreeNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FP_Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="734">
+          <caret line="441" column="57" lean-forward="true" selection-start-line="441" selection-start-column="57" selection-end-line="441" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

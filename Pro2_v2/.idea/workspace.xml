@@ -2,14 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e577b52d-16fa-425c-9e33-b950779960cf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Pro2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Pro2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2/out/production/Pro2/ItemCombination.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Pro2/out/production/Pro2/ItemCombination.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2/out/production/Pro2/ProjectMainClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Pro2/out/production/Pro2/ProjectMainClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pro2/src/ProjectMainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Pro2/src/ProjectMainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace (1).xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace (1).xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Report_Project2_group10.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/input10000.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/input10000_100.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/input1000_20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/input100_25.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/input15000_1000.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/input150_30.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/input50_5.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Pro2_v2/MainClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pro2_v2/MainClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pro2_v2/MainClass.zip" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pro2_v2/MainClass.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output100_25.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output100_25.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output150_30.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output150_30.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output50_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output50_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output100_25.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output15000_1000.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output150_30.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output50_5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2_group10.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sortedTreeSet.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainClass.zip" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainClass.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/summer_output150,30.txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,33 +37,37 @@
     <session id="-926756191">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="10" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.14" value="2" />
+          <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.23" value="2" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.open.time.24" value="1" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="6" />
+          <entry key="java" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="6" />
+          <entry key="JAVA" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="4" />
-          <entry key="java" value="7752" />
+          <entry key="java" value="9837" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7752" />
+          <entry key="JAVA" value="9837" />
           <entry key="PLAIN_TEXT" value="4" />
         </counts>
       </usages-collector>
@@ -59,18 +78,44 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MainClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="90" column="62" selection-start-line="90" selection-start-column="62" selection-end-line="90" selection-end-column="62" />
+            <state relative-caret-position="216">
+              <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="7" column="70" selection-start-line="7" selection-start-column="70" selection-end-line="7" selection-end-column="70" />
+              <folding>
+                <element signature="e#178#179#0" expanded="true" />
+                <element signature="e#257#258#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>hashmap</find>
       <find>treeset</find>
+      <find>dataTreeArray</find>
+      <find>countPairsInPassTwo</find>
+      <find>genFreqKey</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -82,6 +127,8 @@
         <option value="$PROJECT_DIR$/src/ValidFreqItemSetClass.java" />
         <option value="$PROJECT_DIR$/src/ValidFreqCombClass.java" />
         <option value="$PROJECT_DIR$/src/ValidateSubStringThread.java" />
+        <option value="$PROJECT_DIR$/src/GenerateDataSet.java" />
+        <option value="$PROJECT_DIR$/src/Test.java" />
         <option value="$PROJECT_DIR$/src/MainClass.java" />
       </list>
     </option>
@@ -93,10 +140,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-13" />
-    <option name="y" value="-13" />
-    <option name="width" value="1941" />
-    <option name="height" value="1058" />
+    <option name="x" value="-14" />
+    <option name="y" value="-14" />
+    <option name="width" value="1942" />
+    <option name="height" value="1059" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -120,8 +167,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -138,12 +183,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542245331149" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543162718760" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Pro2" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -164,7 +211,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.MainClass">
+    <configuration name="GenerateDataSet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GenerateDataSet" />
+      <module name="Pro2_v2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainClass" />
       <module name="Pro2_v2" />
@@ -172,9 +226,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <module name="Pro2_v2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.MainClass" />
+      <item itemvalue="Application.GenerateDataSet" />
+      <item itemvalue="Application.Test" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainClass" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.GenerateDataSet" />
       </list>
     </recent_temporary>
   </component>
@@ -193,16 +261,22 @@
       <workItem from="1542229339861" duration="1592000" />
       <workItem from="1542234764083" duration="2951000" />
       <workItem from="1542237829338" duration="5198000" />
+      <workItem from="1542245709782" duration="3322000" />
+      <workItem from="1542339174952" duration="184000" />
+      <workItem from="1542346209504" duration="298000" />
+      <workItem from="1542843387928" duration="2487000" />
+      <workItem from="1543082118544" duration="8911000" />
+      <workItem from="1543162288234" duration="300000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21607000" />
+    <option name="totallyTimeSpent" value="37109000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1753" height="954" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20707965" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18230088" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -210,8 +284,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.34629405" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32928312" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30255163" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -248,24 +322,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ValidateSubStringThread.java">
+    <entry file="file://$PROJECT_DIR$/src/ValidateSubStringThread.java" />
+    <entry file="file://$PROJECT_DIR$/src/MainClassTree.java" />
+    <entry file="file://$PROJECT_DIR$/src/GenerateDataSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainClassTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2538">
-          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+        <state relative-caret-position="502">
+          <caret line="46" column="61" selection-start-line="46" selection-start-column="51" selection-end-line="46" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="90" column="62" selection-start-line="90" selection-start-column="62" selection-end-line="90" selection-end-column="62" />
+        <state relative-caret-position="180">
+          <caret line="296" column="75" selection-start-line="296" selection-start-column="75" selection-end-line="296" selection-end-column="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="7" column="70" selection-start-line="7" selection-start-column="70" selection-end-line="7" selection-end-column="70" />
+          <folding>
+            <element signature="e#178#179#0" expanded="true" />
+            <element signature="e#257#258#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

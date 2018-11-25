@@ -8,8 +8,8 @@ public class ProjectMainClass {
     static int totalNum;
     static int supportNum;
     static int ITEM_RANGE = 99;
-    static final int BASKET_NUM = 100;
-    static final int SUPPORT_NUM = 25;
+    static final int BASKET_NUM = 25000;
+    static final int SUPPORT_NUM = 20000;
     static final String OUTPUT_FILE = "output" + BASKET_NUM + "_" + SUPPORT_NUM + ".txt";
     static final String INPUT_FILE = "input" + BASKET_NUM + "_" + SUPPORT_NUM + ".txt";
     static ArrayList<TreesetStructClass> dataSetTreeArray;

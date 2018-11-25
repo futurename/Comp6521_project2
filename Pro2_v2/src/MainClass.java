@@ -5,10 +5,12 @@ public class MainClass {
     static ArrayList<TreeSet<Integer>> dataTreeArray;
     static final int NUM_RANGE = 99;
     static int[] frequentNumArray = new int[NUM_RANGE + 1];
-    static final int BASKET_NUM = 150;
-    static final int SUPPORT_NUM = 30;
+    static final int BASKET_NUM = 25000;
+    static final int SUPPORT_NUM = 500;
     static final String INPUT_FILE = "input" + BASKET_NUM + "_" + SUPPORT_NUM + ".txt";
     static final String OUTPUT_FILE = "output" + BASKET_NUM + "_" + SUPPORT_NUM + ".txt";
+    static final String INPUT_SPARSE = "Sparse 25000 500.txt";
+    static final String OUTPUT_SPARSE = "outputSparse 25000 500.txt";
     static ArrayList<TreeMap<String, Integer>> freqCombArrayMap = new ArrayList<>();
     static ArrayList<Integer> curFreqItem;
 
@@ -236,7 +238,7 @@ public class MainClass {
     private static void writeToFile(TreeMap<String, Integer> map) throws IOException {
         Set<String> set = map.keySet();
         Iterator<String> itr = set.iterator();
-        BufferedWriter bfw = new BufferedWriter(new FileWriter(OUTPUT_FILE, true));
+        BufferedWriter bfw = new BufferedWriter(new FileWriter(OUTPUT_SPARSE, true));
         while (itr.hasNext()) {
             String curLine = itr.next();
             int count = map.get(curLine);
@@ -292,7 +294,7 @@ public class MainClass {
     }
 
     private static void createTreeSet() throws IOException {
-        BufferedReader bfr = new BufferedReader(new FileReader(INPUT_FILE));
+        BufferedReader bfr = new BufferedReader(new FileReader(INPUT_SPARSE));
         String firstLine = bfr.readLine();
         String[] firstLineStringArray = firstLine.split(" ");
         int totalBaskets = Integer.parseInt(firstLineStringArray[0]);
