@@ -1,7 +1,11 @@
+import sun.security.util.Length;
+
 import java.io.*;
 import java.util.*;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
-public class MainClass {
+public class MainClassStream {
     static ArrayList<TreeSet<Integer>> dataTreeArray;
     static final int NUM_RANGE = 99;
     static int[] frequentNumArray = new int[NUM_RANGE + 1];
@@ -10,7 +14,7 @@ public class MainClass {
     static final String INPUT_FILE = "input" + BASKET_NUM + "_" + SUPPORT_NUM + ".txt";
     static final String OUTPUT_FILE = "output" + BASKET_NUM + "_" + SUPPORT_NUM + ".txt";
     static final String INPUT_SPARSE = "Sparse 25000 500.txt";
-    static final String OUTPUT_SPARSE = "Sparseoutput 25000 500.txt";
+    static final String OUTPUT_SPARSE = "stream_outputSparse 25000 500.txt";
     static ArrayList<TreeMap<String, Integer>> freqCombArrayMap = new ArrayList<>();
     static ArrayList<Integer> curFreqItem;
 
@@ -70,6 +74,7 @@ public class MainClass {
             }
         }
     }
+
 
     private static void multiPassProcess(int numOfItems) throws IOException {
         TreeSet<String> genAllCombSet = new TreeSet<>();
@@ -144,6 +149,98 @@ public class MainClass {
         frequentNumArray = new int[NUM_RANGE + 1];
     }
 
+
+
+/*
+
+    private static void multiPassProcess(int numOfItems) throws IOException {
+        TreeSet<String> genAllCombSet = new TreeSet<>();
+        TreeMap<String, Integer> previousValidMap = freqCombArrayMap.get(0);
+        TreeMap<String, Integer> freqStartEndPosMap = new TreeMap<>();
+        Set<String> set = previousValidMap.keySet();
+        Iterator<String> itr = set.iterator();
+        LinkedHashSet<String> keySet = new LinkedHashSet<>();
+
+        Set<String> preFreComSet = set.parallelStream().collect(Collectors.toSet());
+        List<List<Integer>> preFreComIntSet =
+                preFreComSet.parallelStream().map(p -> Arrays.stream(p.split(",")).collect(Collectors.toList()).stream().map(Integer::parseInt).collect(Collectors.toList())).collect(Collectors.toList());
+
+        List<List<Integer>> genComList = new ArrayList<>();
+        for (int k = 0, curFreqLength = curFreqItem.size(); k < curFreqLength; k++) {
+            Integer curNum = curFreqItem.get(k);
+            genComList =
+                    preFreComIntSet.parallelStream().filter(p -> !p.contains(curNum)).collect(Collectors.toList());
+            genComList.parallelStream().map(p->p.add(curNum)).collect(Collectors.toList());
+
+        }
+
+        ArrayList<String> strGenComList =
+                (ArrayList<String>) genComList.parallelStream().map(p->p.stream().map(i->i.toString()).collect(Collectors.joining(","))).collect(Collectors.toList());
+
+        System.out.println(strGenComList.size());
+
+
+     *//*   while (itr.hasNext()) {
+            keySet.add(itr.next());
+        }
+        //System.out.println("preKeySet: " + keySet);
+
+        for (String str : keySet) {
+            *//**//*long startTime = System.currentTimeMillis();*//**//*
+            String preCombString = str;
+            //System.out.println("---------curPreCombString: " + preCombString);
+            String[] preNumbers = preCombString.split(",");
+
+           *//**//* int[] tempAllNumberArray = new int[NUM_RANGE + 1];
+            for (int i = 0; i < preNumbers.length; i++) {
+                int pos = Integer.parseInt(preNumbers[i]);
+                tempAllNumberArray[pos] = -1;
+            }*//**//*
+            for (int i = 0; i < curFreqItem.size(); i++) {
+                int curNum = curFreqItem.get(i);
+                // tempAllNumberArray[curNum]);
+                if (tempAllNumberArray[curNum] != -1 && curNum > Integer.parseInt(preNumbers[preNumbers.length - 1])) {
+                    String genNewString = preCombString + "," + curNum;
+                    //System.out.println("gen one new string: " + genNewString);
+                    //genAllCombSet.add(genNewString);*//*
+
+
+                    *//*LinkedHashSet<String> allSubSets = getAllSubsetList(genNewString);
+
+                    Iterator<String> subSetItr = allSubSets.iterator();
+                    boolean isAllContained = true;
+                    while (subSetItr.hasNext()) {
+                        if (!previousValidMap.containsKey(subSetItr.next())) {
+                            isAllContained = false;
+                            break;
+                        }
+                    }
+
+
+                    if (isAllContained) {
+                        genAllCombSet.add(genNewString);
+                        //tempAllNumberArray[curNum] = -1;
+                        //System.out.println("adding new itemset: " + genNewString);
+                    }*//*
+
+
+                //}
+            //}
+
+
+       // }
+        //System.out.println("genall size:" + genAllCombSet.size() + ", curFreqsize: " + curFreqItem.size() + ", keyset size: " + keySet.size());
+        //ArrayList<String> genAllCombSetToArray = new ArrayList<>(genAllCombSet);
+        //System.out.println("gened comb array: " + genAllCombSetToArray);
+        //countSubset(genAllCombSetToArray, keySet, numOfItems, freqStartEndPosMap);
+        TreeMap<String, Integer> curValidCombMap = countPrunedComb(strGenComList);
+        freqCombArrayMap.clear();
+        freqCombArrayMap.add(curValidCombMap);
+        genFreqItemInMultiPass();
+        writeToFile(curValidCombMap);
+        frequentNumArray = new int[NUM_RANGE + 1];
+    }*/
+
     private static void genFreqItemInMultiPass() {
         curFreqItem = new ArrayList<>();
         for (int i = 0; i < frequentNumArray.length; i++) {
@@ -159,65 +256,39 @@ public class MainClass {
         long startTime = System.currentTimeMillis();
         TreeMap<String, Integer> result = new TreeMap<>();
 
-    /*    for(int j = 0, prunedGenComLength = prunedGenCombArray.size(); j < prunedGenComLength;j++) {
-            int count = 0;
+        for (int j = 0, prunedGenComLength = prunedGenCombArray.size(); j < prunedGenComLength; j++) {
+            //int count = 0;
             String str = prunedGenCombArray.get(j);
             String[] curNumberArray = str.split(",");
-            for (int i = 0, dataTreeArrayLength = dataTreeArray.size(); i < dataTreeArrayLength; i++) {
+            List<Integer> tempList = Arrays.asList(curNumberArray).stream().map(Integer::parseInt).collect(Collectors.toList());
+
+            long count =
+                    dataTreeArray.parallelStream().filter(p -> p.containsAll(tempList)).collect(Collectors.counting());
+
+
+            /*for (int i = 0, dataTreeArrayLength = dataTreeArray.size(); i < dataTreeArrayLength; i++) {
                 TreeSet<Integer> curTree = dataTreeArray.get(i);
-                boolean isAllFound = Arrays.asList(curNumberArray).parallelStream().allMatch(s -> curTree.contains(Integer.parseInt(s)));
-                if (!isAllFound) {
-                    break;
-                } else {
-                    count++;
-                }
-            }
-            if(count >= SUPPORT_NUM){
-                result.put(str, count);
-                for (int m = 0; m < curNumberArray.length; m++) {
-                    int pos = Integer.parseInt(curNumberArray[m]);
-                    frequentNumArray[pos]++;
-                }
-            }
-        }*/
-
-
-
-        for (int k = 0; k < prunedGenCombArray.size(); k++) {
-            String str = prunedGenCombArray.get(k);
-            String[] curNumberArray = str.split(",");
-            int count = 0;
-            //int countIgnored = 0;
-            for (int i = 0; i < dataTreeArray.size(); i++) {
-                TreeSet<Integer> curTree = dataTreeArray.get(i);
-                boolean isAllFound = true;
-                if (curTree.size() < curNumberArray.length || curTree.first() > Integer.parseInt(curNumberArray[0])
-                        || curTree.last() < Integer.parseInt(curNumberArray[curNumberArray.length - 1])) {
-
-                    continue;
-                } else {
-                    for (int j = 0; j < curNumberArray.length; j++) {
-                        int curNum = Integer.parseInt(curNumberArray[j]);
-                        if (!curTree.contains(curNum)) {
-                            isAllFound = false;
-                            break;
-                        }
-                    }
-                }
-
+                boolean isAllFound = Arrays.asList(curNumberArray).stream().allMatch(s -> curTree.contains(Integer.parseInt(s)));
                 if (isAllFound) {
                     count++;
                 }
+            }*/
+            /*StringBuilder str = new StringBuilder();
+
+            for(int i = 0, arrayLength = curNumberArray.length- 1; i < arrayLength; i++) {
+                str.append(curNumberArray[i]);
+                str.append(",");
             }
+            str.append(curNumberArray[curNumberArray.length - 1]);*/
+
             if (count >= SUPPORT_NUM) {
-                result.put(str, count);
-                for (int m = 0; m < curNumberArray.length; m++) {
+                result.put(str, (int)count);
+                for (int m = 0, arrayLength = curNumberArray.length; m < arrayLength; m++) {
                     int pos = Integer.parseInt(curNumberArray[m]);
                     frequentNumArray[pos]++;
                 }
             }
         }
-
 
 
         long endTime = System.currentTimeMillis();
